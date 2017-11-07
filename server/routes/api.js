@@ -1,10 +1,14 @@
 const express=require('express');
 const router=express.Router();
 
+const User=require('../model/user');    
+
+
 const mongoose=require('mongoose');
 
-const db="mongodb://Vaibhav@123:Vaibhav@123@ds117271.mlab.com:/nodejsdemo";
+const db="mongodb://vaibhavuser:vaibhavuser@ds159188.mlab.com:59188/mynodedemo";
 mongoose.Promise=global.Promise;
+// mongodb://Vaibhav@123:Vaibhav@123@ds117271.mlab.com:17271/nodejsdemo
 
 mongoose.connect(db,(err)=>{
     if(err){
